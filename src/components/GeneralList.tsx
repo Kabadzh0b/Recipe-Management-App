@@ -10,7 +10,8 @@ export const GeneralList = ()=>{
             "2. Remove the chicken and cut into pieces (discard skin and bones).",
             "3. Strain the vegetables (reserving the stock) and cut into pieces. Rinse the pot.",
             "4. Return everything to the pot. Heat the soup through and season to taste."
-        ]
+        ],
+        id:Math.random(),
     }];
 
     const dispatch = useDispatch();
