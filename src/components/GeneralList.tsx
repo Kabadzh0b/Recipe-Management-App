@@ -17,27 +17,29 @@ export const GeneralList = ()=>{
 
     return(
         <div>
-            <h1>Recipes List:</h1>
-            {LIST.map((recipe)=> (
-                <div className="Recipe">
-                    <div>
-                        <b>{recipe.name}</b>
+            <h1>General Recipes List:</h1>
+            <div className="Recipe-list">
+                {LIST.map((recipe)=> (
+                    <div className="Recipe">
+                        <div>
+                            <b>{recipe.name}</b>
+                        </div>
+                        <div>
+                            <b>Ingredients:</b>
+                            {recipe.ingredients.map((ingredient)=>(
+                                <p>{ingredient}</p>
+                            ))}
+                        </div>
+                        <div>
+                            <b>Actions:</b>
+                            {recipe.actions.map((action)=>(
+                                <p>{action}</p>
+                            ))}
+                        </div>
+                        <button onClick={() => {dispatch({type:"ADD_FAVORITE_RECIPE", payload:recipe})}}>Add to favorites</button>
                     </div>
-                    <div>
-                        <b>Ingredients:</b>
-                        {recipe.ingredients.map((ingredient)=>(
-                            <p>{ingredient}</p>
-                        ))}
-                    </div>
-                    <div>
-                        <b>Actions:</b>
-                        {recipe.actions.map((action)=>(
-                            <p>{action}</p>
-                        ))}
-                    </div>
-                    <button onClick={() => {dispatch({type:"ADD_FAVORITE_RECIPE", payload:recipe})}}>Add to favorites</button>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     )
 }
