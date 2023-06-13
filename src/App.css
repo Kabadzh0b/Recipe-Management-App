@@ -29,8 +29,14 @@
 
 .Recipe{
   border: 2px solid blue;
-  width: 24vw;
+  width: 23.5vw;
   padding: 5px;
+}
+
+.Recipe-list{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 

@@ -6,8 +6,8 @@ export const FavoriteList = () =>{
     const LIST:Recipe[] = useTypedSelector(state => state.favoriteList);
     return(
         <div>
-            <div>
-                <h1>Recipes List:</h1>
+            <h1>Recipes List:</h1>
+            <div className="Recipe-list">
                 {LIST.map((recipe)=> (
                     <div className="Recipe">
                         <div>
