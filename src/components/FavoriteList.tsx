@@ -16,14 +16,28 @@ export const FavoriteList = () =>{
                         </div>
                         <div>
                             <b>Ingredients:</b>
-                            {recipe.ingredients.map((ingredient)=>(
-                                <p>{ingredient}</p>
+                            {recipe.ingredients.map((ingredient,index)=>(
+                                <p className = {recipe.cooking ? recipe.markedIngredients[index] ? "Marked" : "Can-be-marked" : ""}
+                                onClick={()=>{
+                                    if(recipe.cooking){
+                                       recipe.markedIngredients[index] = !recipe.markedIngredients[index];
+                                       dispatch({type:"MARK", payload:recipe});
+                                    }
+                                }}
+                                >{ingredient}</p>
                             ))}
                         </div>
                         <div>
                             <b>Actions:</b>
-                            {recipe.actions.map((action)=>(
-                                <p>{action}</p>
+                            {recipe.actions.map((action, index)=>(
+                                <p className = {recipe.cooking ? recipe.markedActions[index] ? "Marked" : "Can-be-marked" : ""}
+                                   onClick={()=>{
+                                       if(recipe.cooking){
+                                           recipe.markedActions[index] = !recipe.markedActions[index];
+                                           dispatch({type:"MARK", payload:recipe});
+                                       }
+                                   }}
+                                >{action}</p>
                             ))}
                         </div>
                         <div className="Flex-container">

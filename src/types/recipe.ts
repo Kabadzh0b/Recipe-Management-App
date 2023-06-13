@@ -4,6 +4,8 @@ export interface Recipe{
     actions:string[];
     id:number;
     cooking:boolean;
+    markedIngredients:boolean[];
+    markedActions:boolean[];
 }
 
 export interface listAction{

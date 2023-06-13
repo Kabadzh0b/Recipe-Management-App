@@ -31,6 +31,14 @@ export const favoriteListReducer = (state = defaultState, action: listAction): R
                 }
                 return recipe;
             });
+        case "MARK":
+            const recipeId = action.payload.id;
+            return  state.map((recipe) => {
+                if (recipe.id === recipeId) {
+                    return action.payload;
+                }
+                return recipe;
+            });
         default:
             return state;
     }

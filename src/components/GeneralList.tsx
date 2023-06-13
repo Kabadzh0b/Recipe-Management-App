@@ -13,6 +13,8 @@ export const GeneralList = ()=>{
         ],
         id:Math.random(),
         cooking:false,
+        markedIngredients:[false,false,false],
+        markedActions:[false,false,false,false],
     }];
 
     const dispatch = useDispatch();

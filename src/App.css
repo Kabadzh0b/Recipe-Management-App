@@ -66,3 +66,12 @@
   cursor: pointer;
 }
 
+.Can-be-marked{
+  cursor: pointer;
+}
+
+.Marked {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
