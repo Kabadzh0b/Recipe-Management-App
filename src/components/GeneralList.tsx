@@ -1,9 +1,6 @@
+import {Recipe} from "../types/recipe";
+import {useDispatch} from "react-redux";
 
-interface Recipe{
-    name:string;
-    ingredients:string[];
-    actions:string[];
-}
 export const GeneralList = ()=>{
     const LIST:Recipe[] = [{
         name:"Chicken Soup",
@@ -15,6 +12,9 @@ export const GeneralList = ()=>{
             "4. Return everything to the pot. Heat the soup through and season to taste."
         ]
     }];
+
+    const dispatch = useDispatch();
+
     return(
         <div>
             <h1>Recipes List:</h1>
@@ -35,7 +35,7 @@ export const GeneralList = ()=>{
                             <p>{action}</p>
                         ))}
                     </div>
-                    <button>Add to favorites</button>
+                    <button onClick={() => {dispatch({type:"ADD_FAVORITE_RECIPE", payload:recipe})}}>Add to favorites</button>
                 </div>
             ))}
         </div>

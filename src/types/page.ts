@@ -1,5 +1,5 @@
 export interface pageState{
-    page:string;
+    page: "General" | "Favorite";
 }
 
 export interface pageAction{
@@ -7,6 +7,3 @@ export interface pageAction{
     payload?:string,
 }
 
-export const defaultState:pageState = {
-    page: "General",
-}

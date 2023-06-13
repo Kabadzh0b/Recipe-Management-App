@@ -2,7 +2,7 @@ import './App.css';
 import {Header} from "./components/Header";
 import {Provider} from "react-redux";
 import {store} from "./store";
-import {GeneralList} from "./components/GeneralList";
+import {List} from "./components/List";
 
 
 
@@ -11,7 +11,7 @@ function App() {
       <Provider store={store}>
           <div className="App">
               <Header></Header>
-              <GeneralList></GeneralList>
+              <List></List>
           </div>
       </Provider>
 
