@@ -1,13 +1,20 @@
-import React from 'react';
 import './App.css';
+import {Header} from "./components/Header";
+import {Provider} from "react-redux";
+import {store} from "./store";
+import {GeneralList} from "./components/GeneralList";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header>
+      <Provider store={store}>
+          <div className="App">
+              <Header></Header>
+              <GeneralList></GeneralList>
+          </div>
+      </Provider>
 
-      </header>
-    </div>
   );
 }
 
