@@ -15,6 +15,21 @@ export const GeneralList = ()=>{
         cooking:false,
         markedIngredients:[false,false,false],
         markedActions:[false,false,false,false],
+    },
+    {
+        name:"Breaded and Baked Chicken Drumsticks",
+        ingredients:[
+            "1-3 eggs",
+            "Seasonings"
+        ],
+        actions:[
+            "1. Crack an egg on frying pan",
+            "2. Put some seasonings",
+        ],
+        id:Math.random(),
+        cooking:false,
+        markedIngredients:[false,false],
+        markedActions:[false,false],
     }];
 
     const dispatch = useDispatch();
@@ -40,7 +55,9 @@ export const GeneralList = ()=>{
                                 <p>{action}</p>
                             ))}
                         </div>
-                        <button onClick={() => {dispatch({type:"ADD_FAVORITE_RECIPE", payload:recipe})}}>Add to favorites</button>
+                        <button className="Add-to-favorites-btn" onClick={() => {
+                            dispatch({type:"ADD_FAVORITE_RECIPE", payload:recipe})}
+                        }>Add to favorites</button>
                     </div>
                 ))}
             </div>

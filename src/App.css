@@ -39,6 +39,15 @@
   flex-wrap: wrap;
 }
 
+.Add-to-favorites-btn{
+  width: 18.5vw;
+  border-radius: 25px;
+  background: rgb(43, 113, 243);
+  font-family: "Avignon Pro";
+  font-size:25px;
+  cursor: pointer;
+}
+
 .Flex-container{
   display: flex;
 }
