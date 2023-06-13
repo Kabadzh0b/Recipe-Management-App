@@ -1,9 +1,9 @@
 import {Recipe} from "../types/recipe";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 
-
 export const FavoriteList = () =>{
     const LIST:Recipe[] = useTypedSelector(state => state.favoriteList);
+
     return(
         <div>
             <h1>Favorite Recipes List:</h1>

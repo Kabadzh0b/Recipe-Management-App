@@ -2,14 +2,12 @@ import {useTypedSelector} from "../hooks/useTypedSelector";
 import {GeneralList} from "./GeneralList";
 import {FavoriteList} from "./FavoriteList";
 
-
 export const List = () =>{
 
-    let page = useTypedSelector(state => state.page);
-    console.log(page);
+    const page = useTypedSelector(state => state.page.page);
     return(
         <>
-            {page.page === "General" ? <GeneralList/> : <FavoriteList/>}
+            {page === "General" ? <GeneralList/> : <FavoriteList/>}
         </>
     )
 }

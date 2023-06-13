@@ -4,6 +4,6 @@ export interface pageState{
 
 export interface pageAction{
     type:string,
-    payload?:string,
+    payload?:"General" | "Favorite",
 }
 

@@ -10,7 +10,6 @@ export const pageReducer = (state = defaultState,action:pageAction):pageState =>
             return {...state, page:"General"};
         case "SET_FAVORITES":
             return {...state, page:"Favorite"};
-
         default:
             return state;
     }
