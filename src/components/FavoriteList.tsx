@@ -30,7 +30,9 @@ export const FavoriteList = () =>{
                             <div onClick={()=>{dispatch({type:"DELETE_FAVORITE_RECIPE", payload:recipe})}}>
                                 <img className="Red-cross" src = {redCross} alt = "red cross"/>
                             </div>
-                            <button className="Start-cooking-btn">Start cooking!</button>
+                            <button className = {!recipe.cooking ? "Start-cooking-btn" : "End-cooking-btn"} onClick={()=>{
+                                dispatch({type:"CHANGE_COOKING",payload:recipe});
+                            }}>{!recipe.cooking ? "Start cooking!" : "End cooking"}</button>
                         </div>
 
                     </div>

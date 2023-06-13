@@ -12,6 +12,7 @@ export const GeneralList = ()=>{
             "4. Return everything to the pot. Heat the soup through and season to taste."
         ],
         id:Math.random(),
+        cooking:false,
     }];
 
     const dispatch = useDispatch();

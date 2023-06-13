@@ -3,9 +3,10 @@ export interface Recipe{
     ingredients:string[];
     actions:string[];
     id:number;
+    cooking:boolean;
 }
 
 export interface listAction{
     type:string,
-    payload?:Recipe,
+    payload:Recipe,
 }
