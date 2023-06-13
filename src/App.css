@@ -39,5 +39,22 @@
   flex-wrap: wrap;
 }
 
+.Flex-container{
+  display: flex;
+}
+
+.Red-cross{
+  width: 4vw;
+  cursor: pointer;
+}
+
+.Start-cooking-btn{
+  width: 18.5vw;
+  border-radius: 25px;
+  background: rgb(148, 246, 81);
+  font-family: "Avignon Pro";
+  font-size:25px;
+  cursor: pointer;
+}
 
 

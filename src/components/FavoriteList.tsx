@@ -1,9 +1,10 @@
 import {Recipe} from "../types/recipe";
 import {useTypedSelector} from "../hooks/useTypedSelector";
-
+import redCross from "../images/red-cross.png";
+import {useDispatch} from "react-redux";
 export const FavoriteList = () =>{
     const LIST:Recipe[] = useTypedSelector(state => state.favoriteList);
-
+    const dispatch = useDispatch();
     return(
         <div>
             <h1>Favorite Recipes List:</h1>
@@ -25,8 +26,16 @@ export const FavoriteList = () =>{
                                 <p>{action}</p>
                             ))}
                         </div>
+                        <div className="Flex-container">
+                            <div onClick={()=>{dispatch({type:"DELETE_FAVORITE_RECIPE", payload:recipe})}}>
+                                <img className="Red-cross" src = {redCross} alt = "red cross"/>
+                            </div>
+                            <button className="Start-cooking-btn">Start cooking!</button>
+                        </div>
+
                     </div>
                 ))}
+
             </div>
         </div>
     )
